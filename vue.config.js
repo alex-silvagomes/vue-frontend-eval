@@ -7,6 +7,11 @@ function resolveSrc(_path) {
 
 module.exports = {
   lintOnSave: false,
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 9000,
+  },
   configureWebpack: {
     // Set up all the aliases we use in our app.
     resolve: {
